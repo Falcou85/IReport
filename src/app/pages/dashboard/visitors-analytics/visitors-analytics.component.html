@@ -1,0 +1,18 @@
+<nb-card size="medium">
+  <nb-card-header>
+    <div class="title">Visitors Analytics</div>
+    <div class="sub-title">Consumption</div>
+  </nb-card-header>
+  <nb-card-body>
+    <div class="chart-container">
+      <div class="chart-header">
+        <app-legend-chart [legendItems]="chartLegend"></app-legend-chart>
+      </div>
+      <app-visitors-analytics-chart></app-visitors-analytics-chart>
+    </div>
+  </nb-card-body>
+
+  <app-slide-out [showVisitorsStatistics]="true">
+    <app-visitors-statistics></app-visitors-statistics>
+  </app-slide-out>
+</nb-card>

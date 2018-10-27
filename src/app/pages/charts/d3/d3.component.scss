@@ -1,0 +1,40 @@
+@import '../../../shared/theme/styles/themes';
+
+@include nb-install-component() {
+  app-d3-bar,
+  app-d3-pie,
+  app-d3-advanced-pie,
+  app-d3-area-stack,
+  app-d3-line,
+  app-d3-polar {
+    display: block;
+    width: 100%;
+    height: nb-theme(card-height-medium);
+
+    /deep/ {
+      .pie-label {
+        fill: nb-theme(color-fg-heading);
+      }
+
+      .grid-line-path {
+        stroke: nb-theme(separator);
+      }
+
+      text {
+        fill: nb-theme(color-fg-heading);
+      }
+
+      .chart-legend {
+        .legend-labels {
+          background: nb-theme(color-bg);
+        }
+        .legend-label {
+          color: nb-theme(color-fg-heading);
+          .active .legend-label-text {
+            color: nb-theme(color-fg-heading);
+          }
+        }
+      }
+    }
+  }
+}

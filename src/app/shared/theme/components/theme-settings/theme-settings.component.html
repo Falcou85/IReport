@@ -1,0 +1,25 @@
+<h6>LAYOUTS</h6>
+<div class="settings-row">
+  <a *ngFor="let layout of layouts"
+     href="#"
+     [class.selected]="layout.selected"
+     [attr.title]="layout.name"
+     (click)="layoutSelect(layout)">
+    <i [attr.class]="layout.icon"></i>
+  </a>
+</div>
+<h6>SIDEBAR</h6>
+<div class="settings-row">
+  <a *ngFor="let sidebar of sidebars"
+     href="#"
+     [class.selected]="sidebar.selected"
+     [attr.title]="sidebar.name"
+     (click)="sidebarSelect(sidebar)">
+    <i [attr.class]="sidebar.icon"></i>
+  </a>
+</div>
+<h6>THEMES</h6>
+<app-theme-switcher></app-theme-switcher>
+<div class="switcher">
+  <app-layout-direction-switcher [vertical]="true"></app-layout-direction-switcher>
+</div>

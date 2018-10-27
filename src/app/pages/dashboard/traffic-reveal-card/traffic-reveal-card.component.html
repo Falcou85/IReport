@@ -1,0 +1,16 @@
+<nb-reveal-card [showToggleButton]="false" [revealed]="revealed">
+  <nb-card-front>
+    <nb-card size="small">
+      <app-traffic-cards-header (periodChange)="setPeriod($event)"></app-traffic-cards-header>
+      <app-traffic-front-card [frontCardData]="trafficListData"></app-traffic-front-card>
+      <i class="nb-arrow-up" (click)="toggleView()"></i>
+    </nb-card>
+  </nb-card-front>
+  <nb-card-back>
+    <nb-card size="small">
+      <app-traffic-cards-header (periodChange)="setPeriod($event)"></app-traffic-cards-header>
+      <app-traffic-back-card [trafficBarData]="trafficBarData"></app-traffic-back-card>
+      <i class="nb-arrow-down" (click)="toggleView()"></i>
+    </nb-card>>
+  </nb-card-back>
+</nb-reveal-card>
